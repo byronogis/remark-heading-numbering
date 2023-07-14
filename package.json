@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.6.2",
-  "description": "",
+  "description": "A remark plugin to add numbering to headings",
   "author": "Byron < byronogis@outlook.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/byronogis",
@@ -46,6 +46,9 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "unist-util-visit": "^5.0.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.4",
     "@antfu/ni": "^0.21.3",
@@ -68,8 +71,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "dependencies": {
-    "unist-util-visit": "^5.0.0"
   }
 }
