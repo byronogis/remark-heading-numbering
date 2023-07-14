@@ -27,9 +27,8 @@ input `example.md`:
   
 ```js
 import fs from 'node:fs'
-
-const remark = require('remark')
-const headingNumbering = require('remark-heading-numbering')
+import { remark } from 'remark'
+import remarkHeadingNumbering from 'remark-heading-numbering'
 
 remark()
   .use(remarkHeadingNumbering)
