@@ -1,7 +1,7 @@
 {
   "name": "remark-heading-numbering",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.6.2",
   "description": "A remark plugin to add numbering to headings",
   "author": "Byron < byronogis@outlook.com>",
