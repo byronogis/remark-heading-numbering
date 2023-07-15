@@ -104,6 +104,10 @@ output:
 ## 3.2 标题八
 ```
 
+## Options
+
+- `separator`: The separator between numbers. Default: `.`
+
 ## Sponsors
 
 <p align="center">

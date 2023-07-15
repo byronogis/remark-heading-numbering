@@ -1,7 +1,16 @@
 import { visit } from 'unist-util-visit'
 
-export default function remarkHeadingNumbering() {
+interface Options {
+  separator?: string
+}
+
+export default function remarkHeadingNumbering(options?: Options) {
   const counters: Record<string, number> = {}
+
+  options = {
+    separator: '.',
+    ...options,
+  }
 
   function incrementCounter(depth: number) {
     if (!counters[depth])
@@ -17,7 +26,7 @@ export default function remarkHeadingNumbering() {
     for (let i = 1; i <= depth; i++)
       counters[i] && numberArr.push(counters[i])
 
-    return numberArr.join('.')
+    return numberArr.join(options!.separator!)
   }
 
   function resetCounters(depth: number) {
