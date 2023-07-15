@@ -37,7 +37,7 @@
     "dist"
   ],
   "scripts": {
-    "example": "nr build && cd example && esno example.js",
+    "example": "cd example && esno example.js",
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",

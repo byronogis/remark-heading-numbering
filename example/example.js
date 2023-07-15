@@ -1,10 +1,10 @@
 import fs from 'node:fs'
 import { remark } from 'remark'
-import remarkHeadingNumbering from 'remark-heading-numbering'
 import remarkToc from 'remark-toc'
+import remarkHeadingNumbering from '../src/index'
 
 remark()
-  .use(remarkHeadingNumbering)
+  .use(remarkHeadingNumbering, { separator: '_' })
   .use(remarkToc, {
     // before
     // heading: 'toc|table[ -]of[ -]contents?|目录',
@@ -13,5 +13,6 @@ remark()
   })
   .process(fs.readFileSync('example.md'))
   .then((file) => {
-    console.log(file.toString())
+    console.log(file)
+    fs.writeFileSync('example.out.md', file.value)
   })
